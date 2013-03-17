@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class AppMainScreen extends Activity {
 	
 	
+	
 	MainActivity temp;
 	String tag = "Revolver Log :";
 	
