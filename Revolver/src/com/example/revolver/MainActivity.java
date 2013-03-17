@@ -34,7 +34,7 @@ import android.widget.ImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.revolve_mainactivity);
         
         
         final EditText username = (EditText)findViewById(R.id.Username);
