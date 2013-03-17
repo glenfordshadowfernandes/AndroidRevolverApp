@@ -17,7 +17,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="29dp"
         android:layout_marginRight="19dp"
-        android:text="Close" />
+        android:text="Save" />
 
     <TextView
         android:id="@+id/textView1"
@@ -48,5 +48,27 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:src="@android:drawable/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/userPhoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="15dp"
+        android:text="Phone :"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/phoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/userPhoneNo"
+        android:layout_alignBottom="@+id/userPhoneNo"
+        android:layout_alignLeft="@+id/UseremailText"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="12sp" />
 
 </RelativeLayout>

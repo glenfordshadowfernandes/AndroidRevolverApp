@@ -2,10 +2,12 @@ package com.example.revolver;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -13,7 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class AppMainScreen extends Activity {
+public class UserProfile extends Activity {
 	
 	
 	
@@ -21,6 +23,7 @@ public class AppMainScreen extends Activity {
 	String tag = "Revolver Log :";
 	SQLiteDatabase myDB;
 	ImageView userpic;
+	TextView phoneNo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,7 @@ public class AppMainScreen extends Activity {
         TextView useremailDisplay = (TextView)findViewById(R.id.UseremailText);
         Button closeButton = (Button)findViewById(R.id.CloseButton);
         userpic = (ImageView)findViewById(R.id.userimage);
+        phoneNo = (TextView)findViewById(R.id.phoneNo);
         
         Cursor c = myDB.rawQuery("SELECT * FROM UserId",null);
         Log.i(tag , "cursor selected");
@@ -40,9 +44,13 @@ public class AppMainScreen extends Activity {
         c.moveToFirst();
         String userEmail = c.getString(col);
         Log.i(tag , "useremail = "+userEmail);
+        TelephonyManager tMgr =(TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+        String tempNo = tMgr.getLine1Number();
+        
         useremailDisplay.setText(userEmail);
         Bitmap userimage = getImage();
         userpic.setImageBitmap(userimage);
+        phoneNo.setText(tempNo);
         
         myDB.close();
         
