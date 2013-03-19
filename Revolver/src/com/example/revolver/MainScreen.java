@@ -21,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 @SuppressLint("NewApi") public class MainScreen extends Activity {
 
@@ -29,9 +30,27 @@ import android.widget.ImageView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.revolv_mainscreen);
+        ImageView diary = (ImageView)findViewById(R.id.DiaryCircle);
+        ImageView friends = (ImageView)findViewById(R.id.FriendsCircle);
+        ImageView relig = (ImageView)findViewById(R.id.RelgCircle);
+        ImageView rest = (ImageView)findViewById(R.id.RestCircle);
+        ImageView starred = (ImageView)findViewById(R.id.StarredCircle);
+        ImageView myPlaces = (ImageView)findViewById(R.id.MyPlCircle);
+        //diary.setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
         
         
         
+        diary.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Toast msg = Toast.makeText(getBaseContext(), "finishes the current intent", Toast.LENGTH_SHORT);
+				msg.show();
+			}
+		});
+        
+       
     }
 
 

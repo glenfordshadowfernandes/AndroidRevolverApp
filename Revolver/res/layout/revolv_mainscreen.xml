@@ -9,4 +9,64 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
+    <ImageView
+        android:id="@+id/centerCircle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/android256" />
+
+    <ImageView
+        android:id="@+id/FriendsCircle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/DiaryCircle"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/android256" />
+
+    <ImageView
+        android:id="@+id/MyPlCircle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/DiaryCircle"
+        android:layout_toLeftOf="@+id/centerCircle"
+        android:src="@drawable/android256" />
+
+    <ImageView
+        android:id="@+id/DiaryCircle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/centerCircle"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="22dp"
+        android:layout_toLeftOf="@+id/FriendsCircle"
+        android:src="@drawable/android256" />
+
+    <ImageView
+        android:id="@+id/RestCircle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/FriendsCircle"
+        android:layout_alignTop="@+id/StarredCircle"
+        android:src="@drawable/android256" />
+
+    <ImageView
+        android:id="@+id/StarredCircle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/DiaryCircle"
+        android:layout_below="@+id/centerCircle"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/android256" />
+
+    <ImageView
+        android:id="@+id/RelgCircle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/StarredCircle"
+        android:layout_toRightOf="@+id/centerCircle"
+        android:src="@drawable/android256" />
+
 </RelativeLayout>

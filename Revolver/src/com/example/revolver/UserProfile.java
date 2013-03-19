@@ -3,6 +3,7 @@ package com.example.revolver;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
@@ -27,13 +28,13 @@ public class UserProfile extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.revolv_appmainscreen);
+        setContentView(R.layout.revolv_userprofilescreen);
         
         
         myDB = this.openOrCreateDatabase("RevolverDb", MODE_PRIVATE, null);
         Log.i(tag , "db opened");
         TextView useremailDisplay = (TextView)findViewById(R.id.UseremailText);
-        Button closeButton = (Button)findViewById(R.id.CloseButton);
+        Button nextButton = (Button)findViewById(R.id.CloseButton);
         userpic = (ImageView)findViewById(R.id.userimage);
         phoneNo = (TextView)findViewById(R.id.phoneNo);
         
@@ -54,13 +55,14 @@ public class UserProfile extends Activity {
         
         myDB.close();
         
-        closeButton.setOnClickListener(new View.OnClickListener() {
+        nextButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				
-				finish();
+				Intent mainScreen = new Intent(UserProfile.this,MainScreen.class);
+				startActivity(mainScreen);
 				
 			}
 		});
