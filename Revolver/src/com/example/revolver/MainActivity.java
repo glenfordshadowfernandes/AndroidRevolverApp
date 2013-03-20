@@ -58,8 +58,15 @@ import android.widget.ImageView;
 				   if(c.getInt(0)!=0){
 					   Log.i(tag , "table rows = "+c.getInt(0));
 					   c.close();
-			        	Intent main_screen = new Intent(MainActivity.this,UserProfile.class);
+			        	
+					   //Call the main Screen Activity
+					   Intent mainScreen = new Intent(MainActivity.this,MainScreen.class);
+						startActivity(mainScreen);
+					   
+						/*
+					   Intent main_screen = new Intent(MainActivity.this,UserProfile.class);
 						startActivity(main_screen);
+						*/
 				   }
 				   else
 				   {
@@ -121,11 +128,13 @@ import android.widget.ImageView;
 					myDB.close();
 				}
 				
+				Intent mainScreen = new Intent(MainActivity.this,MainScreen.class);
+				startActivity(mainScreen);
 				
-				
+				/*
 				Intent main_screen = new Intent(MainActivity.this,UserProfile.class);
 				startActivity(main_screen);
-				
+				*/
 			}
 		});
         

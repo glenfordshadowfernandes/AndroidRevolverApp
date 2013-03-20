@@ -34,7 +34,7 @@ public class UserProfile extends Activity {
         myDB = this.openOrCreateDatabase("RevolverDb", MODE_PRIVATE, null);
         Log.i(tag , "db opened");
         TextView useremailDisplay = (TextView)findViewById(R.id.UseremailText);
-        Button nextButton = (Button)findViewById(R.id.CloseButton);
+        Button saveProfileButton = (Button)findViewById(R.id.CloseButton);
         userpic = (ImageView)findViewById(R.id.userimage);
         phoneNo = (TextView)findViewById(R.id.phoneNo);
         
@@ -55,15 +55,17 @@ public class UserProfile extends Activity {
         
         myDB.close();
         
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        saveProfileButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				
+				/*
 				Intent mainScreen = new Intent(UserProfile.this,MainScreen.class);
 				startActivity(mainScreen);
-				
+				*/
+				finish();
 			}
 		});
         

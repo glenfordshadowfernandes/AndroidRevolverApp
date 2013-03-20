@@ -42,7 +42,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginRight="22dp"
         android:layout_toLeftOf="@+id/FriendsCircle"
-        android:src="@drawable/android256" />
+        android:src="@drawable/diary_icon_selector" />
 
     <ImageView
         android:id="@+id/RestCircle"
