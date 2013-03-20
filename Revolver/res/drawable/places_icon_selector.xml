@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/places_icon_normal_large" android:state_focused="true"></item>
+    <item android:drawable="@drawable/places_icon_pressed_large" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/places_icon_normal_large" android:state_pressed="false"></item>
+</selector>

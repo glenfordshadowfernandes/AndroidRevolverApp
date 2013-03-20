@@ -24,7 +24,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/DiaryCircle"
         android:layout_marginRight="30dp"
-        android:src="@drawable/android256" />
+        android:src="@drawable/friend_icon_selector" />
 
     <ImageView
         android:id="@+id/MyPlCircle"
@@ -32,7 +32,7 @@
         android:layout_height="80dp"
         android:layout_below="@+id/DiaryCircle"
         android:layout_toLeftOf="@+id/centerCircle"
-        android:src="@drawable/android256" />
+        android:src="@drawable/places_icon_selector" />
 
     <ImageView
         android:id="@+id/DiaryCircle"
@@ -50,7 +50,7 @@
         android:layout_height="80dp"
         android:layout_alignLeft="@+id/FriendsCircle"
         android:layout_alignTop="@+id/StarredCircle"
-        android:src="@drawable/android256" />
+        android:src="@drawable/restau_icon_selector" />
 
     <ImageView
         android:id="@+id/StarredCircle"
@@ -59,7 +59,7 @@
         android:layout_alignLeft="@+id/DiaryCircle"
         android:layout_below="@+id/centerCircle"
         android:layout_marginTop="20dp"
-        android:src="@drawable/android256" />
+        android:src="@drawable/fav_icon_selector" />
 
     <ImageView
         android:id="@+id/RelgCircle"
@@ -67,6 +67,6 @@
         android:layout_height="80dp"
         android:layout_above="@+id/StarredCircle"
         android:layout_toRightOf="@+id/centerCircle"
-        android:src="@drawable/android256" />
+        android:src="@drawable/religious_icon_selector" />
 
 </RelativeLayout>

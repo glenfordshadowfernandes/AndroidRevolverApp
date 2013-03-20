@@ -22,6 +22,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 @SuppressLint("NewApi") public class MainScreen extends Activity {
 
@@ -36,7 +38,7 @@ import android.widget.Toast;
         ImageView rest = (ImageView)findViewById(R.id.RestCircle);
         ImageView starred = (ImageView)findViewById(R.id.StarredCircle);
         ImageView myPlaces = (ImageView)findViewById(R.id.MyPlCircle);
-        //diary.setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
+       
         
         
         
@@ -45,23 +47,86 @@ import android.widget.Toast;
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Toast msg = Toast.makeText(getBaseContext(), "finishes the current intent", Toast.LENGTH_SHORT);
+				Intent diaryListIntent = new Intent(MainScreen.this,DiaryList.class);
+				startActivity(diaryListIntent);
+			}
+		});
+        
+        friends.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+				Toast msg = Toast.makeText(getBaseContext(), "called friends", Toast.LENGTH_SHORT);
 				msg.show();
 			}
 		});
         
+        relig.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+				Toast msg = Toast.makeText(getBaseContext(), "called religs", Toast.LENGTH_SHORT);
+				msg.show();
+			}
+		});
+        
+        rest.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+				Toast msg = Toast.makeText(getBaseContext(), "called restaurants", Toast.LENGTH_SHORT);
+				msg.show();
+			}
+		});
        
+        starred.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+				Toast msg = Toast.makeText(getBaseContext(), "called favs", Toast.LENGTH_SHORT);
+				msg.show();
+			}
+		});
+        
+        myPlaces.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+				Toast msg = Toast.makeText(getBaseContext(), "called My places", Toast.LENGTH_SHORT);
+				msg.show();
+			}
+		});
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        //getMenuInflater().inflate(R.menu.main, menu);
+    	super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
         return true;
     }
     
-   
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.user_profile_setter: 
+            startActivity(new Intent(this, UserProfile.class));
+        }
+        return true;
+    }
     
 }
 

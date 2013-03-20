@@ -25,6 +25,7 @@
         </activity>
         <activity android:name="com.example.revolver.UserProfile"></activity>
         <activity android:name="com.example.revolver.MainScreen"></activity>
+        <activity android:name="com.example.revolver.DiaryList"></activity>
     </application>
 
 </manifest>
