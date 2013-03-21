@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".RegistrationScreen" >
 
     <ImageView
         android:id="@+id/Userpic"
@@ -34,7 +34,7 @@
         android:layout_alignLeft="@+id/textView4"
         android:layout_alignRight="@+id/textView4"
         android:layout_below="@+id/Userpic"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:orientation="horizontal"
         android:showDividers="end" >
 
@@ -97,22 +97,14 @@
         </HorizontalScrollView>
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/Userpic"
-        android:text="@string/place_name_"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/Userpic"
-        android:layout_alignRight="@+id/textView1"
+        android:layout_marginBottom="16dp"
         android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/MorePics"
@@ -120,8 +112,18 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/linearLayout1"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="30dp"
         android:text="More Pics:"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:text="@string/place_name_"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="15sp" />
 
 </RelativeLayout>

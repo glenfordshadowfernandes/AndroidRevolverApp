@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/markFav"
+        android:title="@string/Favourite"
+        android:icon="@android:drawable/star_off"
+        android:showAsAction="ifRoom|withText" />
+    
+    <item
+        android:id="@+id/visited"
+        android:title="@string/Visited"
+        android:icon="@android:drawable/arrow_down_float"
+        android:showAsAction="ifRoom|withText" />
+    
+
+</menu>

@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.revolver.MainActivity"
+            android:name="com.example.revolver.RegistrationScreen"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,8 @@
         <activity android:name="com.example.revolver.UserProfile"></activity>
         <activity android:name="com.example.revolver.MainScreen"></activity>
         <activity android:name="com.example.revolver.DiaryList"></activity>
-        <activity android:name="com.example.revolver.PlacesScreen"></activity>
+        <activity android:name="com.example.revolver.PlacesScreen"
+            	  android:uiOptions="none" ></activity>
     </application>
 
 </manifest>

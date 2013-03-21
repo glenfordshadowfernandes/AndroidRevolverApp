@@ -20,7 +20,7 @@ public class UserProfile extends Activity {
 	
 	
 	
-	MainActivity temp;
+	RegistrationScreen temp;
 	String tag = "Revolver Log :";
 	SQLiteDatabase myDB;
 	ImageView userpic;

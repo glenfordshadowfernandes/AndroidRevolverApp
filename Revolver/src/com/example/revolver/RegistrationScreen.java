@@ -22,7 +22,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-@SuppressLint("NewApi") public class MainActivity extends Activity {
+@SuppressLint("NewApi") public class RegistrationScreen extends Activity {
 
 	SQLiteDatabase myDB = null;
 	String TableName = "UserId";
@@ -60,7 +60,7 @@ import android.widget.ImageView;
 					   c.close();
 			        	
 					   //Call the main Screen Activity
-					   Intent mainScreen = new Intent(MainActivity.this,MainScreen.class);
+					   Intent mainScreen = new Intent(RegistrationScreen.this,MainScreen.class);
 						startActivity(mainScreen);
 					   
 						/*
@@ -128,7 +128,7 @@ import android.widget.ImageView;
 					myDB.close();
 				}
 				
-				Intent mainScreen = new Intent(MainActivity.this,MainScreen.class);
+				Intent mainScreen = new Intent(RegistrationScreen.this,MainScreen.class);
 				startActivity(mainScreen);
 				
 				/*

@@ -7,5 +7,7 @@
     <string name="user_profile_screen">View/Edit Profile</string>
     <string name="Diary_List_Heading">Diary :</string>
     <string name="place_name_">Place Name:</string>
+    <string name="Favourite">Favourite</string>
+    <string name="Visited">Visited</string>
 
 </resources>

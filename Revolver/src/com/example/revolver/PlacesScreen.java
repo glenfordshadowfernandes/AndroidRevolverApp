@@ -13,6 +13,7 @@ import android.graphics.BitmapFactory;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,11 +22,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PlacesScreen extends Activity {
 	
 	HorizontalScrollView imageScrollView;
 	LinearLayout imageHolder;
+	Boolean Favflag = false;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +62,42 @@ public class PlacesScreen extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+        getMenuInflater().inflate(R.menu.items, menu);
+        return super.onCreateOptionsMenu(menu);
+        //return true;
     }
     
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+ 
+        super.onOptionsItemSelected(item);
+ 
+        
+        switch(item.getItemId()){
+            case R.id.markFav:
+                Toast.makeText(getBaseContext(), "You selected Fav", Toast.LENGTH_SHORT).show();
+                if(!Favflag)
+                {
+                	item.setIcon(android.R.drawable.star_on);
+                	this.Favflag = true;
+                }
+                else
+                {
+                	item.setIcon(android.R.drawable.star_off);
+                	this.Favflag = false;
+                }
+                break;
+ 
+            case R.id.visited:
+                Toast.makeText(getBaseContext(), "You selected Visited", Toast.LENGTH_SHORT).show();
+                break;
+ 
+        }
+        
+        
+        return true;
+ 
+    }
     
     
 
