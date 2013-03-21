@@ -9,20 +9,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/imageView1"
-        android:layout_marginLeft="16dp"
-        android:text="Place Name:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/Userpic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="26dp"
@@ -30,79 +20,108 @@
         android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView1"
-        android:layout_alignLeft="@+id/textView1"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:layout_width="fill_parent"
         android:layout_height="1px"
-        android:layout_below="@+id/imageView1"
+        android:layout_below="@+id/Userpic"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
         android:background="#DADADA" />
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:background="#DADADA" />
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="400dp"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_below="@+id/Userpic"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal"
+        android:showDividers="end" >
+
+        <TextView
+            android:id="@+id/ImageTopBorder"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#DADADA" />
+		  
+        
+    </LinearLayout>
+    
+    <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"           
+            android:layout_below="@+id/linearLayout1" >
+
+            <LinearLayout
+                android:id="@+id/horiImageHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+                
+                 <ImageView
+			        android:id="@+id/PlacePic1"
+			        android:layout_width="80dp"
+			        android:layout_height="80dp"
+			        android:src="@drawable/ic_launcher" />
+                 <ImageView
+			        android:id="@+id/PlacePic2"
+			        android:layout_width="80dp"
+			        android:layout_height="80dp"
+			        android:src="@drawable/ic_launcher" />
+                 <ImageView
+			        android:id="@+id/PlacePic3"
+			        android:layout_width="80dp"
+			        android:layout_height="80dp"
+			        android:src="@drawable/ic_launcher" />
+                 <ImageView
+			        android:id="@+id/PlacePic4"
+			        android:layout_width="80dp"
+			        android:layout_height="80dp"
+			        android:src="@drawable/ic_launcher" />
+                 <ImageView
+			        android:id="@+id/PlacePic5"
+			        android:layout_width="80dp"
+			        android:layout_height="80dp"
+			        android:src="@drawable/ic_launcher" />
+                 <ImageView
+			        android:id="@+id/PlacePic6"
+			        android:layout_width="80dp"
+			        android:layout_height="80dp"
+			        android:src="@drawable/ic_launcher" />
+			       
+            </LinearLayout>
+            
+        </HorizontalScrollView>
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:background="#DADADA" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:background="#DADADA" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:background="#DADADA" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        android:background="#DADADA" />
-
-    <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="39dp"
-        android:text="More Pics:"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/Userpic"
+        android:text="@string/place_name_"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="137dp"
-        android:background="#DADADA" />
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Userpic"
+        android:layout_alignRight="@+id/textView1"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="139dp"
-        android:background="#DADADA" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:background="#DADADA" />
+        android:id="@+id/MorePics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="41dp"
+        android:text="More Pics:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

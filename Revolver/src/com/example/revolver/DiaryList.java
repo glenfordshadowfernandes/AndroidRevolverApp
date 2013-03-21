@@ -12,11 +12,14 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DiaryList extends Activity {
 	
@@ -34,6 +37,36 @@ public class DiaryList extends Activity {
         ArrayAdapter<String> diaryAdapter = new ArrayAdapter<String>(this,
         		android.R.layout.simple_list_item_1, android.R.id.text1, diaryListValues);
         diaryList.setAdapter(diaryAdapter);
+        
+        
+        diaryList.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+					long id) {
+				//Toast.makeText(getApplicationContext(),"Click ListItem Id = " + position, Toast.LENGTH_LONG).show();
+				
+				switch (position) {
+				case 0:
+					startActivity(new Intent(DiaryList.this,PlacesScreen.class));
+					break;
+				case 1:
+					Toast.makeText(getApplicationContext(),"Click ListItem Id = " + position, Toast.LENGTH_SHORT).show();
+					break;
+				case 2:
+					Toast.makeText(getApplicationContext(),"Click ListItem Id = " + position, Toast.LENGTH_SHORT).show();
+					break;
+				case 3:
+					Toast.makeText(getApplicationContext(),"Click ListItem Id = " + position, Toast.LENGTH_SHORT).show();
+					break;
+				default:
+				
+					break;
+				}
+				
+			}
+        	
+		});
     }
 
 
