@@ -9,16 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".RegistrationScreen" >
 
-    <ImageView
-        android:id="@+id/Userpic"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="26dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/ic_launcher" />
-
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="1px"
@@ -34,7 +24,7 @@
         android:layout_alignLeft="@+id/textView4"
         android:layout_alignRight="@+id/textView4"
         android:layout_below="@+id/Userpic"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal"
         android:showDividers="end" >
 
@@ -97,33 +87,63 @@
         </HorizontalScrollView>
 
     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignTop="@+id/Userpic"
+        android:text="@string/place_name_"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="15sp" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/Userpic"
-        android:layout_marginBottom="16dp"
+        android:layout_alignLeft="@+id/MorePics"
+        android:layout_below="@+id/textView1"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/Userpic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_launcher" />
 
     <TextView
         android:id="@+id/MorePics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/linearLayout1"
         android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
         android:text="More Pics:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:text="@string/place_name_"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="15sp" />
+	
+     <TextView
+        android:id="@+id/_friendListTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="200dp"
+        android:layout_below="@+id/textView2"
+        android:text="Friends Visited:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="15sp" />
+     
+    <ListView
+        android:id="@+id/_visitedFreindList"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/_friendListTag"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" >
+    </ListView>
 
 </RelativeLayout>

@@ -37,7 +37,7 @@ public class DiaryList extends Activity {
         ArrayAdapter<String> diaryAdapter = new ArrayAdapter<String>(this,
         		android.R.layout.simple_list_item_1, android.R.id.text1, diaryListValues);
         diaryList.setAdapter(diaryAdapter);
-        
+       // System.out.println(System.getProperty("java.runtime.version"));
         
         diaryList.setOnItemClickListener(new OnItemClickListener() {
 
