@@ -58,6 +58,20 @@ public class PlacesScreen extends Activity {
 			
 			placeName = (TextView)findViewById(R.id.textView2);
 			placeName.setText(result);
+			
+			String photoFetch1 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(0)+"&sensor=false&key="+_map_API_KEY;
+	        String photoFetch2 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(1)+"&sensor=false&key="+_map_API_KEY;
+	        String photoFetch3 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(2)+"&sensor=false&key="+_map_API_KEY;
+	        String photoFetch4 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(3)+"&sensor=false&key="+_map_API_KEY;
+	        String photoFetch5 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(4)+"&sensor=false&key="+_map_API_KEY;
+	        
+	        new httpPhotoRequest().execute(photoFetch1 , Integer.toString(0));
+	        new httpPhotoRequest().execute(photoFetch2 , Integer.toString(1));
+	        new httpPhotoRequest().execute(photoFetch3 , Integer.toString(2));
+	        new httpPhotoRequest().execute(photoFetch4 , Integer.toString(3));
+	        new httpPhotoRequest().execute(photoFetch5 , Integer.toString(4));
+			
+	        Log.i(tag  ,"photo array size = "+ _PHOTO_REFERENCE_KEYS.size());
 	    }
 
 		@Override
@@ -121,6 +135,7 @@ public class PlacesScreen extends Activity {
 		protected void onPostExecute(Bitmap placePhoto, String... pictNum) {
 			
 			String count = pictNum[1].toString();
+			Log.i(tag  ,"String name = "+pictNum[1].toString());
 			img1.setImageBitmap(placePhoto);
 	    }
 
@@ -143,7 +158,7 @@ public class PlacesScreen extends Activity {
 					
 				}
 		        
-				Log.i(tag  ,"Passed https ");
+				//Log.i(tag  ,"Passed https ");
 				
 			return placePic;
 		}
@@ -189,12 +204,29 @@ public class PlacesScreen extends Activity {
         new httpRequest().execute(url);  
         Log.i(tag  ,"out of http request ");
         
-        for (int i = 0; i < _PHOTO_REFERENCE_KEYS.size(); i++) {
+       /* for (int i = 0; i < _PHOTO_REFERENCE_KEYS.size(); i++) {
         	Log.i(tag  ,"in photo loop ");
         	String photoFetch ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(i)+"&sensor=false&key="+_map_API_KEY;
         	 new httpPhotoRequest().execute(photoFetch , Integer.toString(i)); 
-		}  
-		//CODE TO FETCH GOOGLE PLACE API RESULTS --- END
+		}  */
+        
+      /*  String photoFetch1 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(0)+"&sensor=false&key="+_map_API_KEY;
+        String photoFetch2 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(1)+"&sensor=false&key="+_map_API_KEY;
+        String photoFetch3 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(2)+"&sensor=false&key="+_map_API_KEY;
+        String photoFetch4 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(3)+"&sensor=false&key="+_map_API_KEY;
+        String photoFetch5 ="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+_PHOTO_REFERENCE_KEYS.get(4)+"&sensor=false&key="+_map_API_KEY;
+        
+        new httpPhotoRequest().execute(photoFetch1 , Integer.toString(0));
+        new httpPhotoRequest().execute(photoFetch2 , Integer.toString(1));
+        new httpPhotoRequest().execute(photoFetch3 , Integer.toString(2));
+        new httpPhotoRequest().execute(photoFetch4 , Integer.toString(3));
+        new httpPhotoRequest().execute(photoFetch5 , Integer.toString(4));
+        */
+        Log.i(tag  ,"photo array size = "+ _PHOTO_REFERENCE_KEYS.size());
+        
+        Log.i(tag  ,"out of all http request ");
+        
+        //CODE TO FETCH GOOGLE PLACE API RESULTS --- END
     }
 
 
